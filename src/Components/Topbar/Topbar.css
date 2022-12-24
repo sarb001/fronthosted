@@ -1,0 +1,16 @@
+.topbar-main
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+.icons
+{
+    align-self: center;
+}
+.third-part
+{
+    align-self: center;
+    display: grid;
+    grid-template-columns: 100px 100px;
+}
