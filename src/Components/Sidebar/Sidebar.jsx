@@ -14,16 +14,18 @@ const Sidebar = () => {
                    minus beatae? 
                   </div>
                   <div className="title-categories">
-                     <h2>  CATEGORIES </h2>
-                     <span> music  </span>
-                     <span> life   </span>
-                     <span> sport   </span>
-                     <span>  food </span>
-                     <span> health  </span>
-                     <span> diy </span>
+                     <h4>  CATEGORIES </h4>
+                     <ul style = {{listStyleType:'none',fontSize:'21px'}} >
+                      <li> music  </li>
+                      <li> life  </li>
+                      <li> sport  </li>
+                      <li> food  </li>
+                      <li> health  </li>
+                      <li> diy  </li>
+                     </ul>
                   </div>
                   <div className="title-section">
-                      <h3> FOLLOW US </h3>
+                      <h4> FOLLOW US </h4>
                     </div>
           </div>
       </div>
