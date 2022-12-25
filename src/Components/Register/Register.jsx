@@ -18,6 +18,9 @@ const Register = () => {
                 <button type = "submit"> Register  </button>
               </span>
           </form>
+                <button type = "submit" >
+                   <Link to = "/login"> Login </Link>   
+                 </button>
          </div>
     </div>
   )
