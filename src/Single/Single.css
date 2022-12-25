@@ -1,0 +1,7 @@
+.singlepost
+{
+     padding-top: 3%;
+     display:grid;
+     grid-template-columns: 1fr 1fr;
+     column-gap: 250px;
+}

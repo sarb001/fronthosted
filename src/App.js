@@ -6,6 +6,8 @@ import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import Topbar from './Components/Topbar/Topbar';
 import Write from './Components/Write/Write';
+// import SinglePost from './Components/Singlepost/SinglePost';
+import Single from './Single/Single';
 
  export default function App() 
  {
@@ -15,11 +17,10 @@ import Write from './Components/Write/Write';
       <BrowserRouter>
       <Topbar />
         <Routes>
-          <Route exact path = "/" element = {<Home />}>  </Route>
-          <Route exact path = "/login" element = {<Login />}>  </Route>
-          <Route exact path = "/register" element = {<Register />}>  </Route>
-
-          <Route exact path = "/write" element = {<Write  />}>  </Route>
+          <Route exact path = "/"     element = {<Single  />}>  </Route>
+          <Route  path = "/login" element = {<Login />}>  </Route>
+          <Route  path = "/register" element = {<Register />}>  </Route>
+          <Route  path = "/write" element = {<Write  />}>  </Route>
 
         </Routes>
       </BrowserRouter>
