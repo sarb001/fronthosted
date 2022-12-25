@@ -11,7 +11,9 @@ const Login = () => {
                <input  type = "name" placeholder = 'Enter your name' />
                <label> Password : </label>
                <input  type = "password" placeholder = 'Enter your password' />
-               <butto> Login here  </butto>
+               <span style = {{padding:'3%'}} > 
+               <button> Login here  </button>
+               </span>
              </form>
           </div>
     </div>

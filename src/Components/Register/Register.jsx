@@ -14,8 +14,9 @@ const Register = () => {
             <input type = "email"  placeholder = 'Enter your Email ' />
             <label> Password - </label>
             <input type = "name"  placeholder = 'Enter your password ' />
-
-             <button type = "submit"> Register  </button>
+              <span style = {{padding:'3%'}}>
+                <button type = "submit"> Register  </button>
+              </span>
           </form>
          </div>
     </div>
