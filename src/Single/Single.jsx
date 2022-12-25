@@ -7,7 +7,7 @@ import './Single.css';
 const Single = () => {
   return (
     <div> 
-            <div className = "singlepost" >
+            <div className      = "singlepost" >
                  <div className = "singlepost-main"> 
                     <SinglePost />
                  </div>
