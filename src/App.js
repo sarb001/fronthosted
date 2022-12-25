@@ -6,8 +6,9 @@ import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import Topbar from './Components/Topbar/Topbar';
 import Write from './Components/Write/Write';
-import SinglePost from './Components/Singlepost/SinglePost';
-import Single from './Single/Single';
+// import SinglePost from './Components/Singlepost/SinglePost';
+// import Single from './Single/Single';
+// import Settings from './Components/Settings/Settings';
 
  export default function App() 
  {

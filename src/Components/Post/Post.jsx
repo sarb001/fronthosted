@@ -1,11 +1,12 @@
 import React from 'react'
 import './Post.css';
+// import SinglePost from '../Singlepost/SinglePost';
 
 const Post = () => {
   return (
     <div> 
-          <div className="main-container" >
-               <div className="main-image"> 
+          <div className = "main-container" >
+               <div className = "main-image"> 
                 <img src = "/images/image-2.jpg" alt = "main-image"  style = {{width:'85%'}} />
                </div>
                <div className="main-title">
