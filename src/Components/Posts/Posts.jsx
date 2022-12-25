@@ -5,14 +5,15 @@ import './Posts.css';
 const Posts = () => {
   return (
     <div> 
-      
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+         <div className = "mainposts-section">
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+         </div>
     </div>
   )
 }
