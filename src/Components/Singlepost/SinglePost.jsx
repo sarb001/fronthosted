@@ -6,7 +6,7 @@ const SinglePost = () => {
     <div> 
               <div className = "main-singlepost">
                     <div className = "singlepostwrapper">
-                      <img src = "/images/image-2.jpg"  alt = "main-img" style = {{width:'100%'}}/>
+                      <img src = "/images/image-2.jpg"  alt = "main-img" style = {{width:'60%'}}/>
                     </div>
               </div>
              <h2 className = 'singlepost-title'> SinglePost   </h2> 
