@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
+
+  const user = true;
+
   return (
     <div>  
        <h2> Login </h2> 
@@ -13,6 +16,7 @@ const Login = () => {
                <label> Password : </label>
                <input  type = "password" placeholder = 'Enter your password' />
                <span style = {{padding:'3%'}} > 
+              
                <button type = "submit"> Login here  </button>
                </span>
              </form>
