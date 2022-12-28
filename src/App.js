@@ -14,7 +14,7 @@ import Single from './Components/Single/Single';
 
  export default function App() 
  {
-     const user = true;
+     const user = false;
 
   return (
     <>
@@ -25,8 +25,8 @@ import Single from './Components/Single/Single';
               <Route  exact path = "/"       element = {<Home />}>  </Route>
               <Route  path = "/login"        element = { user ?  <Home/> :  <Login /> }>          </Route>   
               <Route  path = "/register"     element = { user ?  <Home /> : <Register />} >     </Route>
-              <Route  path = "/write"        element = { user ?  <Write /> :  <Register/>} >     </Route>
-              <Route  path = "/settings"     element = {<Settings />}> </Route>
+              <Route  path = "/write"        element = { user ?  <Write /> :  <Register/> } >     </Route>
+              <Route  path = "/settings"     element = { user ?  <Settings />  :  <Register/> }> </Route>
               <Route  path = "/post/:postid" element = {<Single  />}>  </Route> 
             </Routes>
       </BrowserRouter>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Topbar.css';
 
 const Topbar = () => {
-  const user = true;
+  const user = false;
   return (
     <div> 
          <div className = "topbar-main">
@@ -21,13 +21,13 @@ const Topbar = () => {
                         </li>
                 </ul>
              </div>
-             <div className="third-part" >
+             <div className = "third-part" >
                     <span>   
                         { user ? (<>  
                         <Link>  LOGOUT   </Link> 
                           <span> <img src = "/images/image-2.jpg"  style = {{width:'35%'}} /> </span>
                         </>) : (<>
-                          <span> <Link>  Register </Link>    </span>
+                          <span> <Link to = "/register">  Register </Link>    </span>
                         </>) 
                         }
                     </span>
