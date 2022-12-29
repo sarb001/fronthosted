@@ -2,17 +2,14 @@ import React from 'react';
 import Post from '../Post/Post';
 import './Posts.css';
 
-const Posts = () => {
+const Posts = ({posts}) => {
   return (
     <div> 
          <div className = "mainposts-section">
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
+          { posts.map((p) => (
+              <Post post = {p} />
+          ))
+          }
          </div>
     </div>
   )

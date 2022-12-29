@@ -1,15 +1,27 @@
-import React from 'react'
+import axios from 'axios'
+import React, {useState , useEffect }  from 'react'
 import Posts from '../Posts/Posts'
 import Sidebar from '../Sidebar/Sidebar'
 
+
 const Home = () => {
+  const [posts,setposts] = useState([]);
+
+  useEffect(() => {
+    const fetchposts = async () => {
+       const res = await axios.get('/posts')
+                        //  console.log(res);
+      setposts(res.data);
+    }
+    fetchposts();
+  },[])
   return (
     <div> 
            <div className = "home-component">
               <h2>  React & Node Blog  </h2>
            </div>
            <div className  = "posts-section" style = {{display:'grid', gridTemplateColumns:'1fr 300px'}}>
-              <Posts />
+              <Posts posts = {posts} />
               <Sidebar />
            </div>
     </div>
