@@ -17,19 +17,21 @@ const Topbar = () => {
                     <li>  <Link to = "/">  HOME  </Link>    </li>
                     <li>  <Link to = "/about">  ABOUT  </Link>    </li>
                     <li>  <Link to = "/contact">  CONTACT  </Link>  </li>
-                    <li>   { user ? (<> <Link to = "/write">  WRITE  </Link>  </> ) : (<> </>) } 
-                        </li>
+                    <li>  <Link to = "/write">  Write </Link> </li>
                 </ul>
              </div>
              <div className = "third-part" >
                     <span>   
-                        { user ? (<>  
-                        <Link>  LOGOUT   </Link> 
-                          <span> <img src = "/images/image-2.jpg"  style = {{width:'35%'}} /> </span>
-                        </>) : (<>
-                          <span> <Link to = "/register">  Register </Link>    </span>
-                        </>) 
-                        }
+                      { user && 'LOGOUT' }
+                      { user ? (<>
+                        <ul>
+                          <li>  <span> <img src = "/images/image-2.jpg"  style = {{width:'35%'}} /> </span>  </li>
+                        </ul> 
+                        </>) : (<ul style = {{display:'flex',columnGap:'40px'}}>
+                                <li>  <span>  <Link to = "/register">  Register </Link>  </span> </li>
+                                <li>  <span>  <Link to = "/login"> LOGIN  </Link> </span>  </li>
+                                 </ul> ) 
+                      }
                     </span>
              </div>
          </div>
