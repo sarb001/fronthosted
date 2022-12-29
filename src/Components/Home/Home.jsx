@@ -1,17 +1,21 @@
 import axios from 'axios'
 import React, {useState , useEffect }  from 'react'
+import { useLocation } from 'react-router-dom'
 import Posts from '../Posts/Posts'
 import Sidebar from '../Sidebar/Sidebar'
 
-
 const Home = () => {
   const [posts,setposts] = useState([]);
+  // const location = useLocation();
+
+  // console.log(location);                // gives what we is going on in URL 
+  const {search} = useLocation();       // Serach Functionality Extracted 
 
   useEffect(() => {
     const fetchposts = async () => {
-       const res = await axios.get('/posts')
+       const res = await axios.get('/posts' + search);      // api/posts/?user=ban
                         //  console.log(res);
-      setposts(res.data);
+        setposts(res.data);
     }
     fetchposts();
   },[])
