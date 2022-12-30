@@ -91,7 +91,7 @@ const SinglePost = () => {
                     <span className = 'singlepost-author'> Author: 
                     <b> {post.username} </b> </span>
                 </Link> 
-                <span className = 'singlepost-date'> 1 hour ago  </span>
+                <span className = 'singlepost-date'> {new Date(post.createdAt).toDateString()} </span>
              </div>
               {
                  updatemode ? (  <textarea value = {desc}  

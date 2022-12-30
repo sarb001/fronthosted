@@ -43,7 +43,9 @@ const Login = () => {
                   <button type = "submit"> Login here  </button>
                </span>
              </form>
-               <button type = "submit"> <Link to = "/register">  Register here </Link> </button>
+               <button type = "submit"> 
+                  <Link to = "/register">  Register here </Link>
+                </button>
           </div>
     </div>
   )

@@ -5,6 +5,7 @@ import './Topbar.css';
 
 const Topbar = () => {
   const { user  ,dispatch } = useContext(Context);
+  const PF = "http://localhost:5000/images/"
 
   const handlelogout = () => {
      dispatch({type : "LOGOUT"})
@@ -29,9 +30,10 @@ const Topbar = () => {
                   <span onClick = {handlelogout} style = {{cursor:'pointer'}}> { user && 'LOGOUT' }  </span>
                     <span> 
                       { user ? (<>
-                        <ul>
-                          <li>  <span> <img src = {user.profilepic}  style = {{width:'100%'}} /> </span>  </li>
-                        </ul> 
+                            <Link to = "/settings">
+                                <span> <img src = {PF + user.profilepic}  style = {{width:'100%'}} /> </span> 
+                            </Link>
+                        
                         </>) : (  <ul style = {{display:'flex',columnGap:'40px'}}>
                                     <li>  <span>  <Link to = "/register">  Register </Link>  </span> </li>
                                     <li>  <span>  <Link to = "/login"> LOGIN  </Link> </span>  </li>
