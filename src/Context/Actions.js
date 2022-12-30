@@ -1,3 +1,4 @@
+
 export const Loginstart = () => ({
     type : "LOGIN_START",
 });
@@ -9,4 +10,8 @@ export const Loginsuccess = (user) => ({
 
 export const Loginfailure = () => ({
     type : "LOGIN_FAIL",
+});
+
+export const Logout = () => ({
+    type : "LOGOUT",
 });

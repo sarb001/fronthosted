@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
+import { Context } from '../../Context/Context';
 import './Topbar.css';
 
 const Topbar = () => {
-  const user = false;
+  const { user  ,dispatch } = useContext(Context);
+
+  const handlelogout = () => {
+     dispatch({type : "LOGOUT"})
+  }
   return (
     <div> 
          <div className = "topbar-main">
@@ -14,22 +19,22 @@ const Topbar = () => {
              </div>
              <div className = "main-links">
                 <ul style = {{display:'grid',gridTemplateColumns:'1fr 1fr 1fr 1fr' ,listStyleType:'none'}} >
-                    <li>  <Link to = "/">  HOME  </Link>    </li>
+                    <li>  <Link to = "/">       HOME  </Link>    </li>
                     <li>  <Link to = "/about">  ABOUT  </Link>    </li>
                     <li>  <Link to = "/contact">  CONTACT  </Link>  </li>
-                    <li>  <Link to = "/write">  Write </Link> </li>
+                    <li>  <Link to = "/write">   Write </Link> </li>
                 </ul>
              </div>
              <div className = "third-part" >
-                    <span>   
-                      { user && 'LOGOUT' }
+                  <span onClick = {handlelogout} style = {{cursor:'pointer'}}> { user && 'LOGOUT' }  </span>
+                    <span> 
                       { user ? (<>
                         <ul>
-                          <li>  <span> <img src = "/images/image-2.jpg"  style = {{width:'35%'}} /> </span>  </li>
+                          <li>  <span> <img src = {user.profilepic}  style = {{width:'100%'}} /> </span>  </li>
                         </ul> 
-                        </>) : (<ul style = {{display:'flex',columnGap:'40px'}}>
-                                <li>  <span>  <Link to = "/register">  Register </Link>  </span> </li>
-                                <li>  <span>  <Link to = "/login"> LOGIN  </Link> </span>  </li>
+                        </>) : (  <ul style = {{display:'flex',columnGap:'40px'}}>
+                                    <li>  <span>  <Link to = "/register">  Register </Link>  </span> </li>
+                                    <li>  <span>  <Link to = "/login"> LOGIN  </Link> </span>  </li>
                                  </ul> ) 
                       }
                     </span>

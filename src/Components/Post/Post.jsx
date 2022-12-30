@@ -4,14 +4,16 @@ import './Post.css';
 import {Link} from  'react-router-dom';
 
 const Post = ({post}) => {
+
+  const PF = 'http://localhost:5000/images/' ;
+
   return (
     <div> 
           <div className = "main-container" >
                <div className = "main-image"> 
-               {post.photo && 
-                ( <img src = {post.photo}
+               {post.photo &&    <img src = {PF + post.photo}
                 alt = "main"  style = {{width:'85%'}} />
-               )}
+               }
                </div>
                <div className="post-cats">
                  {post.categories.map((c) => (

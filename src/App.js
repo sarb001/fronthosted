@@ -8,7 +8,7 @@ import Topbar from './Components/Topbar/Topbar';
 import Write from './Components/Write/Write';
 import Settings from './Components/Settings/Settings';
 import Single from './Components/Single/Single';
-import { ContextProvider } from './Context/Context';
+import { Context, ContextProvider } from './Context/Context';
 
 // import SinglePost from './Components/Singlepost/SinglePost';
 // import Single from './Single/Single';
@@ -16,11 +16,14 @@ import { ContextProvider } from './Context/Context';
 
 import axios from 'axios';
 import { useState } from 'react';
+import { useContext } from 'react';
 
 
  export default function App() 
  {
-     const user = false;
+   const { user } = useContext(Context);
+    //  const user = false;
+    console.log(user);
   return (
     <>
     <div className = "app">

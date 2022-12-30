@@ -6,8 +6,8 @@ export const Reducer = (state,action) => {
                         user : null,
                         isFetching : true,
                         error:false,
-                       }
-                       case "LOGIN_SUCCESS" :
+                        }
+                        case "LOGIN_SUCCESS" :
                         return {
                         user : action.payload,
                         isFetching : false,
@@ -18,6 +18,12 @@ export const Reducer = (state,action) => {
                         user : null,
                         isFetching : false,
                         error:true,
+                        }
+                        case "LOGOUT" :
+                        return {
+                        user : null,
+                        isFetching : false,
+                        error:false,
                         }
                         default : 
                         return state;
