@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext , useState } from 'react';
 import './App.css';
 import {BrowserRouter , Routes ,Route } from 'react-router-dom';
 import Home from './Components/Home/Home';
@@ -9,15 +9,12 @@ import Write from './Components/Write/Write';
 import Settings from './Components/Settings/Settings';
 import Single from './Components/Single/Single';
 import { Context, ContextProvider } from './Context/Context';
+import axios from 'axios';
+
 
 // import SinglePost from './Components/Singlepost/SinglePost';
 // import Single from './Single/Single';
 // import Settings from './Components/Settings/Settings';
-
-import axios from 'axios';
-import { useState } from 'react';
-import { useContext } from 'react';
-
 
  export default function App() 
  {
