@@ -16,11 +16,11 @@ const Topbar = () => {
              <div className = "icons">
                 <span> Fb  </span>
                 <span> Twitter </span>
-                <span> Instagram  </span>
-             </div>
+                <span> Instagram here hai    </span>
+             </div>sss``
              <div className = "main-links">
                 <ul style = {{display:'grid',gridTemplateColumns:'1fr 1fr 1fr 1fr' ,listStyleType:'none'}} >
-                    <li>  <Link to = "/">       HOME  </Link>    </li>
+                    <li>  <Link t o = "/">       HOME  </Link>    </li>
                     <li>  <Link to = "/about">  ABOUT  </Link>    </li>
                     <li>  <Link to = "/contact">  CONTACT  </Link>  </li>
                     <li>  <Link to = "/write">   Write </Link> </li>
